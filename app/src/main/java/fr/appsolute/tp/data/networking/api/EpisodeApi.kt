@@ -6,9 +6,9 @@ import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-interface EpisodeAPI {
+interface EpisodeApi {
 
-    @GET(EpisodeAPI.GET_ALL_EPISODE_PATH)
+    @GET(EpisodeApi.GET_ALL_EPISODE_PATH)
     suspend fun getAllEpisode(
         @Query("page") page: Int
     ): Response<PaginatedResult<Episode>>
