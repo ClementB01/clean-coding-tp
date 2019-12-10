@@ -1,6 +1,5 @@
 package fr.appsolute.tp.data.networking.api
 
-import fr.appsolute.tp.data.model.Character
 import fr.appsolute.tp.data.model.Episode
 import fr.appsolute.tp.data.model.PaginatedResult
 import retrofit2.Response
