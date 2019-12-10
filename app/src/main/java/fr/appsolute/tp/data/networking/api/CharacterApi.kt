@@ -29,14 +29,8 @@ interface CharacterApi {
         @Path("charcater_id") id: Int
     ): Response<Character>
 
-    @GET(GET_ALL_EPISODE_PATH)
-    suspend fun getAllEpisode(
-        @Query("page") page: Int
-    ): Response<PaginatedResult<Character>>
-
     companion object {
         const val GET_ALL_CHARACTER_PATH = "character/"
         const val GET_CHARACTER_DETAIL_PATH = "character/{charcater_id}"
-        const val GET_ALL_EPISODE_PATH = "episode/"
     }
 }
