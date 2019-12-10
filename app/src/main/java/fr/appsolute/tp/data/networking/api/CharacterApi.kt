@@ -4,6 +4,7 @@ import fr.appsolute.tp.data.model.Character
 import fr.appsolute.tp.data.model.PaginatedResult
 import retrofit2.Response
 import retrofit2.http.GET
+import retrofit2.http.Path
 import retrofit2.http.Query
 
 /**
@@ -23,8 +24,19 @@ interface CharacterApi {
         @Query("page") page: Int
     ): Response<PaginatedResult<Character>>
 
+    @GET(GET_CHARACTER_DETAIL_PATH)
+    suspend fun getCharacterDetails(
+        @Path("charcater_id") id: Int
+    ): Response<Character>
+
+    @GET(GET_ALL_EPISODE_PATH)
+    suspend fun getAllEpisode(
+        @Query("page") page: Int
+    ): Response<PaginatedResult<Character>>
+
     companion object {
         const val GET_ALL_CHARACTER_PATH = "character/"
+        const val GET_CHARACTER_DETAIL_PATH = "character/{charcater_id}"
+        const val GET_ALL_EPISODE_PATH = "episode/"
     }
-
 }
