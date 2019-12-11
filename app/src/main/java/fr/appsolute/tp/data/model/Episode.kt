@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
 @Entity(tableName = "episode")
-data class Episode (
+data class Episode @JvmOverloads constructor (
     @PrimaryKey(autoGenerate = false)
     @SerializedName("id") val id: Int,
     @SerializedName("name") val name: String,

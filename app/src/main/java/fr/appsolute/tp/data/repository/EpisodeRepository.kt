@@ -1,11 +1,14 @@
 package fr.appsolute.tp.data.repository
 
+import androidx.paging.PagedList
 import fr.appsolute.tp.RickAndMortyApplication
 import fr.appsolute.tp.data.database.DatabaseManager
 import fr.appsolute.tp.data.database.EpisodeDao
+import fr.appsolute.tp.data.model.Episode
 import fr.appsolute.tp.data.networking.HttpClientManager
 import fr.appsolute.tp.data.networking.api.EpisodeApi
 import fr.appsolute.tp.data.networking.createApi
+import kotlinx.coroutines.CoroutineScope
 
 private class EpisodeRepositoryImpl(
     private val api: EpisodeApi,
@@ -25,7 +28,7 @@ interface EpisodeRepository {
      */
     //fun getPaginatedList(scope: CoroutineScope): PagedList<Episode>
 
-    //suspend fun getCharacterDetails(id: Int): Character?
+    //suspend fun getEpisodeDetails(id: Int): Episode?
 
     companion object {
         /**
