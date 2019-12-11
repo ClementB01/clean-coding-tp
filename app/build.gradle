@@ -14,6 +14,17 @@ android {
         versionName "1.0"
         buildConfigField("String", "BASE_URL", "\"https://rickandmortyapi.com/api/\"")
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [
+                        "room.schemaLocation"  : "$projectDir/build/schemas".toString(),
+                        "room.incremental"     : "false",
+                        "room.expandProjection": "true"
+                ]
+            }
+        }
+
     }
     buildTypes {
         release {

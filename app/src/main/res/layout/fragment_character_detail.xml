@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:onClick="btnListEpisodeClick">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imageView"
@@ -76,5 +77,18 @@
         app:layout_constraintTop_toBottomOf="@+id/txtSpecies"
         app:layout_constraintVertical_bias="0.1"
         tools:text="GENDER" />
+
+    <Button
+        android:id="@+id/btnListEpisode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="btnListEpisodeClick"
+        android:text="Liste des épisodes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintVertical_bias="0.716" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
